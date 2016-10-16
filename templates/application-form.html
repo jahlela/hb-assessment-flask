@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+ 
+{% block body %}
+
+  <h2>Job Application</h2>
+
+  <p id="intro_text">To start your application, please complete the following:</p>
+
+  <!-- Collect first name, last name, salary, job title from user and send 
+  a POST request to /application -->
+  <form id="application_form" action="/application" method="POST">
+    <p><label for="first_name">First name: </label><input type="text" name="first_name"></p>
+    <p><label for="last_name">Last name: </label><input  id="last_name" type="text" name="last_name"></p>
+    <p><label for="desired_salary">Salary Req: </label><input type="text" pattern="[0-9]*" name="salary"></p>
+
+    <label for="job">Job you are applying for: </label>
+      <select name="job">
+        <option value="software_engineer">Software Engineer</option>
+        <option value="qa_engineer">QA Engineer</option>
+        <option value="product_manager">Product Manager</option>
+      </select><br><br>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
